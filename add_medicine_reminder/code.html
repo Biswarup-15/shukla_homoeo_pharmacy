@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shukla Homoeo - Add Medicine Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#62b4fe",
+                        "surface-container-highest": "#e0e4db",
+                        "on-tertiary-container": "#ffaec6",
+                        "surface-bright": "#f7fbf1",
+                        "outline": "#717a6d",
+                        "surface-container-high": "#e6e9e0",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#90d689",
+                        "primary": "#00450d",
+                        "surface-dim": "#d8dbd2",
+                        "on-surface": "#191d17",
+                        "tertiary-fixed": "#ffd9e2",
+                        "tertiary-fixed-dim": "#ffb1c8",
+                        "secondary-fixed-dim": "#99cbff",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed": "#001d34",
+                        "inverse-surface": "#2d322c",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ecefe6",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-primary-fixed": "#002203",
+                        "background": "#f7fbf1",
+                        "on-background": "#191d17",
+                        "on-tertiary-fixed": "#3e001d",
+                        "tertiary": "#6b1d3d",
+                        "on-tertiary-fixed-variant": "#7a2949",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b5e20",
+                        "outline-variant": "#c0c9bb",
+                        "on-secondary-container": "#004470",
+                        "primary-fixed": "#acf4a4",
+                        "tertiary-container": "#883454",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f5ec",
+                        "inverse-primary": "#91d78a",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface": "#f7fbf1",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#eff2e9",
+                        "on-secondary-fixed-variant": "#004a78",
+                        "surface-tint": "#2a6b2c",
+                        "surface-variant": "#e0e4db",
+                        "on-error-container": "#93000a",
+                        "secondary": "#00629e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "sm": "12px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "price-tag": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "price-tag": ["20px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #1b5e20;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #1b5e20;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg antialiased min-h-screen flex flex-col pt-16 md:pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-xs bg-surface dark:bg-surface-dim shadow-sm h-16 md:h-20 transition-all duration-300">
+<div class="flex items-center gap-4">
+<a href="../medicine_reminders/code.html" class="p-2 -ml-2 rounded-full hover:bg-surface-container-low transition-colors group flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant group-active:scale-95 duration-150">arrow_back</span>
+</a>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-bold">Add Reminder</h1>
+</div>
+<div class="flex items-center gap-2">
+<a href="../notifications/code.html" class="p-2 rounded-full hover:bg-surface-container-low transition-colors group hidden md:flex flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant group-active:scale-95 duration-150">notifications</span>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-margin-mobile md:px-margin-desktop py-lg pb-32 md:pb-lg max-w-3xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] p-md md:p-lg">
+<form class="space-y-lg" onsubmit="event.preventDefault(); window.location.href='../medicine_reminders/code.html';">
+<!-- Medicine Name -->
+<div class="space-y-sm">
+<label class="block font-title-lg text-title-lg text-on-surface" for="medicineName">Medicine Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">pill</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-sm pl-12 pr-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-lg text-on-surface placeholder:text-on-surface-variant/50" id="medicineName" placeholder="e.g. Arnica Montana" type="text"/>
+</div>
+</div>
+<!-- Dosage -->
+<div class="space-y-sm">
+<label class="block font-title-lg text-title-lg text-on-surface" for="dosage">Dosage</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">water_drop</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-sm pl-12 pr-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-lg text-on-surface placeholder:text-on-surface-variant/50" id="dosage" placeholder="e.g. 2 drops / 1 tablet" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Frequency -->
+<div class="space-y-sm">
+<label class="block font-title-lg text-title-lg text-on-surface" for="frequency">Frequency</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">event_repeat</span>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-full py-sm pl-12 pr-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-lg text-on-surface appearance-none" id="frequency">
+<option>Once Daily</option>
+<option>Twice Daily</option>
+<option>Three Times Daily</option>
+<option>As Needed</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Time -->
+<div class="space-y-sm">
+<label class="block font-title-lg text-title-lg text-on-surface" for="time">Time</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">schedule</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-sm pl-12 pr-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-lg text-on-surface" id="time" type="time" value="08:00"/>
+</div>
+</div>
+</div>
+<!-- Notifications Toggle -->
+<div class="flex items-center justify-between p-md bg-surface-container-low rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-on-surface">Enable Notifications</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Get push alerts when it's time.</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-low appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-high cursor-pointer transition-colors duration-300" for="toggle"></label>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-md">
+<a href="../medicine_reminders/code.html" class="w-full bg-primary text-on-primary font-headline-sm text-headline-sm rounded-full py-md shadow-[0px_4px_12px_rgba(0,0,0,0.1)] hover:bg-surface-tint active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer">
+<span class="material-symbols-outlined">save</span>
+                        Save Reminder
+</a>
+</div>
+</form>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medicine Reminders - Shukla Homoeo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#62b4fe",
+                      "surface-container-highest": "#e0e4db",
+                      "on-tertiary-container": "#ffaec6",
+                      "surface-bright": "#f7fbf1",
+                      "outline": "#717a6d",
+                      "surface-container-high": "#e6e9e0",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#90d689",
+                      "primary": "#00450d",
+                      "surface-dim": "#d8dbd2",
+                      "on-surface": "#191d17",
+                      "tertiary-fixed": "#ffd9e2",
+                      "tertiary-fixed-dim": "#ffb1c8",
+                      "secondary-fixed-dim": "#99cbff",
+                      "on-surface-variant": "#41493e",
+                      "on-secondary-fixed": "#001d34",
+                      "inverse-surface": "#2d322c",
+                      "error-container": "#ffdad6",
+                      "surface-container": "#ecefe6",
+                      "on-primary-fixed-variant": "#0c5216",
+                      "primary-fixed-dim": "#91d78a",
+                      "on-primary-fixed": "#002203",
+                      "background": "#f7fbf1",
+                      "on-background": "#191d17",
+                      "on-tertiary-fixed": "#3e001d",
+                      "tertiary": "#6b1d3d",
+                      "on-tertiary-fixed-variant": "#7a2949",
+                      "on-error": "#ffffff",
+                      "primary-container": "#1b5e20",
+                      "outline-variant": "#c0c9bb",
+                      "on-secondary-container": "#004470",
+                      "primary-fixed": "#acf4a4",
+                      "tertiary-container": "#883454",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f2f5ec",
+                      "inverse-primary": "#91d78a",
+                      "secondary-fixed": "#cfe5ff",
+                      "surface": "#f7fbf1",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#eff2e9",
+                      "on-secondary-fixed-variant": "#004a78",
+                      "surface-tint": "#2a6b2c",
+                      "surface-variant": "#e0e4db",
+                      "on-error-container": "#93000a",
+                      "secondary": "#00629e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "gutter": "16px",
+                      "xs": "8px",
+                      "base": "4px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "sm": "12px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "price-tag": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "price-tag": [
+                              "20px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Toggle Switch Styles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #00450d; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #acf4a4; /* primary-fixed */
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+            background-color: #00450d;
+        }
+        
+        /* Safe Area for Bottom Nav */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 80px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-lg min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-xs bg-surface dark:bg-surface-dim shadow-sm h-16">
+<a href="../home_shukla_homoeo_pharmacy_e_commerce/code.html" aria-label="Go back" class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full flex items-center justify-center active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</a>
+<div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed truncate px-4 font-bold">
+            Shukla Homoeo
+        </div>
+<a href="../notifications/code.html" aria-label="Notifications" class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full flex items-center justify-center active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</a>
+</header>
+<!-- Main Content -->
+<main class="flex-1 pt-[80px] pb-[100px] px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto w-full">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-xs">Medicine Reminders</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Stay on track with your homoeopathic schedule.</p>
+</div>
+<a href="../add_medicine_reminder/code.html" class="hidden md:flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-full font-title-lg text-title-lg hover:bg-[#004a78] transition-colors shadow-[0px_4px_12px_rgba(0,0,0,0.1)] active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined">add</span>
+                Add Reminder
+</a>
+</div>
+<!-- Reminders List -->
+<div class="space-y-gutter">
+<!-- Reminder Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col sm:flex-row sm:items-center justify-between gap-md relative overflow-hidden">
+<!-- Decorative left border -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-start gap-md flex-1">
+<div class="bg-primary-container/20 p-sm rounded-full text-primary-container mt-1 shrink-0">
+<span class="material-symbols-outlined icon-fill">medication_liquid</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Arnica Montana 30C</h3>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-on-surface-variant font-body-md text-body-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-medium text-primary">8:00 AM, 8:00 PM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Twice Daily</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+<span>4 Drops in water</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-lg sm:w-auto w-full pt-4 sm:pt-0 border-t sm:border-t-0 border-surface-container mt-2 sm:mt-0">
+<div class="flex items-center gap-2">
+<button aria-label="Edit reminder" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button aria-label="Delete reminder" class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/50 rounded-full transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<!-- Custom Toggle -->
+<div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-outline-variant appearance-none cursor-pointer z-10 transition-transform duration-300 ease-in-out" id="toggle1" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300 ease-in-out" for="toggle1"></label>
+</div>
+</div>
+</div>
+<!-- Reminder Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col sm:flex-row sm:items-center justify-between gap-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-start gap-md flex-1 opacity-75">
+<div class="bg-surface-container p-sm rounded-full text-on-surface-variant mt-1 shrink-0">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1 line-through text-on-surface-variant">Nux Vomica 200CH</h3>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-on-surface-variant font-body-md text-body-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>9:30 PM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Once Daily</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">pill</span>
+<span>2 Globules</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-lg sm:w-auto w-full pt-4 sm:pt-0 border-t sm:border-t-0 border-surface-container mt-2 sm:mt-0">
+<div class="flex items-center gap-2">
+<button aria-label="Edit reminder" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button aria-label="Delete reminder" class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/50 rounded-full transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<!-- Custom Toggle (Off state) -->
+<div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-outline-variant appearance-none cursor-pointer z-10 transition-transform duration-300 ease-in-out" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300 ease-in-out" for="toggle2"></label>
+</div>
+</div>
+</div>
+<!-- Reminder Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col sm:flex-row sm:items-center justify-between gap-md relative overflow-hidden">
+<!-- Decorative left border -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-start gap-md flex-1">
+<div class="bg-primary-container/20 p-sm rounded-full text-primary-container mt-1 shrink-0">
+<span class="material-symbols-outlined icon-fill">medication</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Rhus Tox 30C</h3>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-on-surface-variant font-body-md text-body-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-medium text-primary">12:00 PM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Weekly (Sunday)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">science</span>
+<span>1 Dose</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-lg sm:w-auto w-full pt-4 sm:pt-0 border-t sm:border-t-0 border-surface-container mt-2 sm:mt-0">
+<div class="flex items-center gap-2">
+<button aria-label="Edit reminder" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button aria-label="Delete reminder" class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/50 rounded-full transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<!-- Custom Toggle -->
+<div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-outline-variant appearance-none cursor-pointer z-10 transition-transform duration-300 ease-in-out" id="toggle3" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300 ease-in-out" for="toggle3"></label>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden for this design, but good for structure) -->
+<div class="hidden flex-col items-center justify-center py-xl mt-lg bg-surface-container-low rounded-2xl border border-dashed border-outline-variant">
+<span class="material-symbols-outlined text-[48px] text-outline mb-4">alarm_add</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">No reminders set</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-sm mb-6">You haven't set any medicine reminders yet. Add one to ensure you never miss a dose.</p>
+<button class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-full font-title-lg text-title-lg hover:bg-[#004a78] transition-colors">
+<span class="material-symbols-outlined">add</span>
+                Add First Reminder
+            </button>
+</div>
+</main>
+<!-- Mobile FAB -->
+<a href="../add_medicine_reminder/code.html" class="md:hidden fixed bottom-[90px] right-margin-mobile w-14 h-14 bg-secondary text-on-secondary rounded-2xl shadow-[0px_8px_24px_rgba(0,98,158,0.4)] flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</a>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface-container dark:bg-surface-container-highest rounded-t-xl shadow-[0px_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-xl" href="../home_shukla_homoeo_pharmacy_e_commerce/code.html">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-xl" href="../mother_tinctures_catalog/code.html">
+<span class="material-symbols-outlined mb-1" data-icon="category">category</span>
+<span class="font-label-md text-label-md">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1 shadow-sm" href="code.html">
+<span class="material-symbols-outlined icon-fill mb-1" data-icon="alarm">alarm</span>
+<span class="font-label-md text-label-md font-bold">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-xl" href="../my_cart_2_items/code.html">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-md text-label-md">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-xl" href="../contact_us_shukla_homoeo_pharmacy/code.html">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Help</span>
+</a>
+</nav>
+<script>
+        // Simple toggle logic for visual feedback
+        document.querySelectorAll('.toggle-checkbox').forEach(toggle => {
+            toggle.addEventListener('change', (e) => {
+                const card = e.target.closest('.rounded-xl');
+                const title = card.querySelector('h3');
+                const accentBar = card.querySelector('.absolute.left-0');
+                
+                if (e.target.checked) {
+                    card.classList.remove('opacity-75');
+                    title.classList.remove('line-through', 'text-on-surface-variant');
+                    title.classList.add('text-on-surface');
+                    accentBar.classList.remove('bg-outline-variant');
+                    accentBar.classList.add('bg-primary');
+                } else {
+                    card.classList.add('opacity-75');
+                    title.classList.add('line-through', 'text-on-surface-variant');
+                    title.classList.remove('text-on-surface');
+                    accentBar.classList.add('bg-outline-variant');
+                    accentBar.classList.remove('bg-primary');
+                }
+            });
+        });
+    </script>
+</body></html>

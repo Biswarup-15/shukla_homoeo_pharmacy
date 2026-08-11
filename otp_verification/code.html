@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shukla Homoeo - OTP Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#62b4fe",
+                      "surface-container-highest": "#e0e4db",
+                      "on-tertiary-container": "#ffaec6",
+                      "surface-bright": "#f7fbf1",
+                      "outline": "#717a6d",
+                      "surface-container-high": "#e6e9e0",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#90d689",
+                      "primary": "#00450d",
+                      "surface-dim": "#d8dbd2",
+                      "on-surface": "#191d17",
+                      "tertiary-fixed": "#ffd9e2",
+                      "tertiary-fixed-dim": "#ffb1c8",
+                      "secondary-fixed-dim": "#99cbff",
+                      "on-surface-variant": "#41493e",
+                      "on-secondary-fixed": "#001d34",
+                      "inverse-surface": "#2d322c",
+                      "error-container": "#ffdad6",
+                      "surface-container": "#ecefe6",
+                      "on-primary-fixed-variant": "#0c5216",
+                      "primary-fixed-dim": "#91d78a",
+                      "on-primary-fixed": "#002203",
+                      "background": "#f7fbf1",
+                      "on-background": "#191d17",
+                      "on-tertiary-fixed": "#3e001d",
+                      "tertiary": "#6b1d3d",
+                      "on-tertiary-fixed-variant": "#7a2949",
+                      "on-error": "#ffffff",
+                      "primary-container": "#1b5e20",
+                      "outline-variant": "#c0c9bb",
+                      "on-secondary-container": "#004470",
+                      "primary-fixed": "#acf4a4",
+                      "tertiary-container": "#883454",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f2f5ec",
+                      "inverse-primary": "#91d78a",
+                      "secondary-fixed": "#cfe5ff",
+                      "surface": "#f7fbf1",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#eff2e9",
+                      "on-secondary-fixed-variant": "#004a78",
+                      "surface-tint": "#2a6b2c",
+                      "surface-variant": "#e0e4db",
+                      "on-error-container": "#93000a",
+                      "secondary": "#00629e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "gutter": "16px",
+                      "xs": "8px",
+                      "base": "4px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "sm": "12px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "price-tag": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "price-tag": [
+                              "20px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .otp-input {
+            width: 48px;
+            height: 56px;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid #c0c9bb; /* outline-variant */
+            border-radius: 0.75rem;
+            background-color: #ffffff; /* surface-container-lowest */
+            color: #191d17; /* on-surface */
+            transition: all 0.2s ease-in-out;
+        }
+        .otp-input:focus {
+            outline: none;
+            border-color: #00450d; /* primary */
+            box-shadow: 0 0 0 2px rgba(0, 69, 13, 0.2);
+        }
+        
+        /* Removing nav shell per rule: Transactional screen (Login/Verification) -> Hide Shell */
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-lg min-h-screen flex items-center justify-center p-margin-mobile md:p-margin-desktop antialiased">
+<!-- Main Container -->
+<main class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.1)] p-xl overflow-hidden relative">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container opacity-20 rounded-bl-full -z-10 pointer-events-none"></div>
+<!-- Back button -->
+<a href="../login_shukla_homoeo_pharmacy/code.html" class="mb-lg text-on-surface-variant hover:text-primary transition-colors flex items-center w-fit group">
+<span class="material-symbols-outlined mr-xs group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-md text-label-md">Back to Login</span>
+</a>
+<!-- Icon / Logo Graphic -->
+<div class="flex justify-center mb-lg">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center border-2 border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="phonelink_ring">phonelink_ring</span>
+</div>
+</div>
+<!-- Header -->
+<div class="text-center mb-xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-xs">Verify Your Mobile Number</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Enter the 6-digit OTP sent to <br/>
+<span class="font-title-lg text-title-lg text-on-surface mt-base block">+91 98765 43210</span>
+</p>
+</div>
+<!-- OTP Input Form -->
+<form class="flex flex-col gap-lg" id="otpForm" onsubmit="event.preventDefault(); window.location.href='../home_shukla_homoeo_pharmacy_e_commerce/code.html';">
+<div class="flex justify-between gap-base md:gap-sm" id="otp-container">
+<input aria-label="Digit 1" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+<input aria-label="Digit 2" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+<input aria-label="Digit 3" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+<input aria-label="Digit 4" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+<input aria-label="Digit 5" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+<input aria-label="Digit 6" autocomplete="off" class="otp-input font-headline-md font-bold" maxlength="1" type="text"/>
+</div>
+<!-- Timer and Resend -->
+<div class="flex flex-col items-center justify-center gap-xs mt-sm">
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+<span class="font-label-md text-label-md font-bold" id="timer">00:45</span>
+</p>
+<div class="flex items-center gap-xs mt-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Didn't receive code?</span>
+<button class="font-label-md text-label-md text-outline cursor-not-allowed transition-colors" disabled="" id="resendBtn" type="button">
+                        Resend OTP
+                    </button>
+</div>
+</div>
+<!-- Verify Button -->
+<a href="../home_shukla_homoeo_pharmacy_e_commerce/code.html" class="w-full bg-[#0277BD] hover:bg-secondary text-white font-title-lg text-title-lg py-sm rounded-full shadow-[0px_8px_24px_rgba(2,119,189,0.25)] transition-all active:scale-95 mt-md flex items-center justify-center gap-xs cursor-pointer">
+<span>Verify &amp; Enter App</span>
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</a>
+</form>
+<!-- Trust Badge -->
+<div class="mt-lg flex justify-center items-center gap-xs text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span class="font-label-md text-label-md">Secure Verification</span>
+</div>
+</main>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('.otp-input');
+            const timerDisplay = document.getElementById('timer');
+            const resendBtn = document.getElementById('resendBtn');
+            let timeLeft = 45;
+            let timerId;
+
+            // OTP Input Logic
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    if (e.target.value.length === 1) {
+                        if (index < inputs.length - 1) {
+                            inputs[index + 1].focus();
+                        }
+                    }
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && e.target.value === '') {
+                        if (index > 0) {
+                            inputs[index - 1].focus();
+                        }
+                    }
+                });
+                
+                // Allow only numbers
+                input.addEventListener('keypress', (e) => {
+                    if (isNaN(e.key)) {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // Timer Logic
+            function startTimer() {
+                clearInterval(timerId);
+                timeLeft = 45;
+                resendBtn.disabled = true;
+                resendBtn.classList.add('text-outline', 'cursor-not-allowed');
+                resendBtn.classList.remove('text-[#0277BD]', 'hover:text-secondary', 'cursor-pointer', 'font-bold');
+                
+                timerId = setInterval(() => {
+                    timeLeft--;
+                    let seconds = timeLeft < 10 ? `0${timeLeft}` : timeLeft;
+                    timerDisplay.textContent = `00:${seconds}`;
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timerId);
+                        timerDisplay.textContent = "00:00";
+                        resendBtn.disabled = false;
+                        resendBtn.classList.remove('text-outline', 'cursor-not-allowed');
+                        resendBtn.classList.add('text-[#0277BD]', 'hover:text-secondary', 'cursor-pointer', 'font-bold');
+                    }
+                }, 1000);
+            }
+
+            // Resend Button
+            resendBtn.addEventListener('click', () => {
+                if (!resendBtn.disabled) {
+                    inputs.forEach(input => input.value = '');
+                    inputs[0].focus();
+                    startTimer();
+                    // Simulate resend API call
+                    console.log("OTP Resent");
+                }
+            });
+
+            // Initial Start
+            startTimer();
+            inputs[0].focus();
+            
+            // Form Submit Simulation
+            document.getElementById('otpForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                let otp = Array.from(inputs).map(i => i.value).join('');
+                if(otp.length === 6) {
+                    // Success state visual feedback
+                    e.target.querySelector('button[type="submit"]').innerHTML = '<span>Verifying...</span><span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span>';
+                    setTimeout(() => {
+                         e.target.querySelector('button[type="submit"]').classList.remove('bg-[#0277BD]');
+                         e.target.querySelector('button[type="submit"]').classList.add('bg-primary-container', 'text-on-primary-container');
+                         e.target.querySelector('button[type="submit"]').innerHTML = '<span>Verified</span><span class="material-symbols-outlined" data-icon="check">check</span>';
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body></html>

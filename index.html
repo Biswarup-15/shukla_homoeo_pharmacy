@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shukla Homoeo Pharmacy - Splash</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#62b4fe",
+                        "surface-container-highest": "#e0e4db",
+                        "on-tertiary-container": "#ffaec6",
+                        "surface-bright": "#f7fbf1",
+                        "outline": "#717a6d",
+                        "surface-container-high": "#e6e9e0",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#90d689",
+                        "primary": "#00450d",
+                        "surface-dim": "#d8dbd2",
+                        "on-surface": "#191d17",
+                        "tertiary-fixed": "#ffd9e2",
+                        "tertiary-fixed-dim": "#ffb1c8",
+                        "secondary-fixed-dim": "#99cbff",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed": "#001d34",
+                        "inverse-surface": "#2d322c",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ecefe6",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-primary-fixed": "#002203",
+                        "background": "#f7fbf1",
+                        "on-background": "#191d17",
+                        "on-tertiary-fixed": "#3e001d",
+                        "tertiary": "#6b1d3d",
+                        "on-tertiary-fixed-variant": "#7a2949",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b5e20",
+                        "outline-variant": "#c0c9bb",
+                        "on-secondary-container": "#004470",
+                        "primary-fixed": "#acf4a4",
+                        "tertiary-container": "#883454",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f5ec",
+                        "inverse-primary": "#91d78a",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface": "#f7fbf1",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#eff2e9",
+                        "on-secondary-fixed-variant": "#004a78",
+                        "surface-tint": "#2a6b2c",
+                        "surface-variant": "#e0e4db",
+                        "on-error-container": "#93000a",
+                        "secondary": "#00629e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "sm": "12px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "price-tag": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "price-tag": ["20px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .pulse-slow {
+            animation: pulseSlow 3s infinite alternate;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseSlow {
+            from {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            to {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div
+            class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-primary-container/10 blur-3xl pulse-slow">
+        </div>
+        <div class="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-secondary-container/10 blur-3xl pulse-slow"
+            style="animation-delay: 1.5s;"></div>
+    </div>
+    <!-- Main Content Canvas -->
+    <main class="z-10 flex flex-col items-center justify-center w-full max-w-md px-margin-mobile">
+        <!-- Logo Icon Container -->
+        <div class="relative mb-lg fade-in-up">
+            <div
+                class="w-24 h-24 rounded-full bg-surface-container-low shadow-md flex items-center justify-center relative z-10 border border-surface-variant">
+                <span class="material-symbols-outlined text-[48px] text-primary"
+                    style="font-variation-settings: 'FILL' 1, 'wght' 300;">
+                    medical_services
+                </span>
+            </div>
+            <!-- Decorative rings -->
+            <div
+                class="absolute inset-0 rounded-full border border-primary-fixed-dim/30 scale-110 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]">
+            </div>
+            <div class="absolute inset-0 rounded-full border border-primary-fixed-dim/20 scale-125 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"
+                style="animation-delay: 0.5s;"></div>
+        </div>
+        <!-- Brand Name -->
+        <div class="text-center fade-in-up delay-100">
+            <h1 class="font-display-lg text-display-lg text-primary tracking-tight mb-xs">
+                Shukla Homoeo
+            </h1>
+        </div>
+        <!-- Tagline -->
+        <div class="text-center fade-in-up delay-300 mb-xl">
+            <p class="font-title-lg text-title-lg text-on-surface-variant max-w-[280px]">
+                Your Trusted Homoeopathic Pharmacy
+            </p>
+        </div>
+        <!-- Minimal Illustration Placeholder -->
+        <div
+            class="w-full max-w-[240px] h-[160px] rounded-xl overflow-hidden shadow-sm fade-in-up delay-500 bg-surface-container-low border border-surface-variant relative">
+            <div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-multiply"
+                data-alt="A clean, minimalist 3D rendering of homeopathic medicine bottles and a mortar and pestle on a pure white surface. Soft, ambient lighting creates gentle shadows. The color palette features pristine whites and subtle, soothing light greens, evoking a modern, professional healthcare environment."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3egPp-KMBbrcZzJ8bFj9jC-pX4nNgXu2o-wajwQrS1oYC3TW0KXiDjS6RW9tPeJq5akW4kZUNSGlkmwixkXyrY6Bpz2uBEcvYzETfTch4k1xQFF7FZ0g2koC15LLkaCXPHRrFKkDp_odPlGsdflUw7gnev_XgF3thP-pSyyZW536_WXKQvd_eAFyJqkmzY9dpIb7g6Rf8EKthh5lhbTzpxtX3Vht7tAmau4JaaCON0e5sXAMAgZta')">
+            </div>
+            <!-- Overlay gradient for smoothness -->
+            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+        </div>
+        <!-- Get Started Button -->
+        <div class="mt-lg fade-in-up delay-500 w-full max-w-xs">
+            <a href="../onboarding_browse_medicines/code.html"
+                class="w-full bg-[#00450d] hover:bg-[#1b5e20] text-white font-title-lg text-title-lg py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <span>Get Started</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+        </div>
+        <!-- Loading Indicator (Subtle) -->
+        <div class="mt-md fade-in-up delay-500">
+            <div class="flex gap-2">
+                <div class="w-2 h-2 rounded-full bg-primary/40 animate-bounce"></div>
+                <div class="w-2 h-2 rounded-full bg-primary/60 animate-bounce" style="animation-delay: 0.1s"></div>
+                <div class="w-2 h-2 rounded-full bg-primary animate-bounce" style="animation-delay: 0.2s"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Suppressed TopAppBar and BottomNavBar as this is a Splash (Transactional/Linear) screen -->
+    <script>
+        // Simulate a redirect after a few seconds
+        setTimeout(() => {
+            window.location.href = "../onboarding_browse_medicines/code.html";
+        }, 3000);
+    </script>
+</body>
+
+</html>

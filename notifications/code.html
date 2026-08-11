@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - Shukla Homoeo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#62b4fe",
+                    "surface-container-highest": "#e0e4db",
+                    "on-tertiary-container": "#ffaec6",
+                    "surface-bright": "#f7fbf1",
+                    "outline": "#717a6d",
+                    "surface-container-high": "#e6e9e0",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#90d689",
+                    "primary": "#00450d",
+                    "surface-dim": "#d8dbd2",
+                    "on-surface": "#191d17",
+                    "tertiary-fixed": "#ffd9e2",
+                    "tertiary-fixed-dim": "#ffb1c8",
+                    "secondary-fixed-dim": "#99cbff",
+                    "on-surface-variant": "#41493e",
+                    "on-secondary-fixed": "#001d34",
+                    "inverse-surface": "#2d322c",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#ecefe6",
+                    "on-primary-fixed-variant": "#0c5216",
+                    "primary-fixed-dim": "#91d78a",
+                    "on-primary-fixed": "#002203",
+                    "background": "#f7fbf1",
+                    "on-background": "#191d17",
+                    "on-tertiary-fixed": "#3e001d",
+                    "tertiary": "#6b1d3d",
+                    "on-tertiary-fixed-variant": "#7a2949",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b5e20",
+                    "outline-variant": "#c0c9bb",
+                    "on-secondary-container": "#004470",
+                    "primary-fixed": "#acf4a4",
+                    "tertiary-container": "#883454",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f5ec",
+                    "inverse-primary": "#91d78a",
+                    "secondary-fixed": "#cfe5ff",
+                    "surface": "#f7fbf1",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#eff2e9",
+                    "on-secondary-fixed-variant": "#004a78",
+                    "surface-tint": "#2a6b2c",
+                    "surface-variant": "#e0e4db",
+                    "on-error-container": "#93000a",
+                    "secondary": "#00629e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "32px",
+                    "gutter": "16px",
+                    "xs": "8px",
+                    "base": "4px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "sm": "12px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "price-tag": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "title-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-sm": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "price-tag": [
+                            "20px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill-1 {
+             font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen pt-[64px] pb-[80px] md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-sm fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-xs">
+<a href="../home_shukla_homoeo_pharmacy_e_commerce/code.html" class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-2 active:scale-95 duration-150 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</a>
+<div class="font-title-lg text-title-lg text-primary dark:text-primary-fixed font-bold">Notifications</div>
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-2 active:scale-95 duration-150 flex items-center justify-center">
+<!-- Placeholder for visual balance -->
+<span class="material-symbols-outlined opacity-0">more_vert</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-md text-headline-md text-primary">Inbox</h2>
+<button class="font-label-md text-label-md text-secondary hover:text-secondary-fixed-dim transition-colors flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px]" data-icon="done_all">done_all</span> Mark all as read
+            </button>
+</div>
+<!-- Today Group -->
+<section class="mb-xl">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-sm uppercase tracking-wider">Today</h3>
+<div class="space-y-sm">
+<!-- Notification Card (Unread, Order Update) -->
+<a href="../order_tracking_live_status/code.html" class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] p-md flex gap-md items-start relative border-l-4 border-primary hover:bg-surface-container-low transition-colors block cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary-container icon-fill-1" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-title-lg text-title-lg text-on-surface font-semibold">Order Out for Delivery</h4>
+<span class="font-label-md text-label-md text-primary font-medium">10:30 AM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Your order #SH-9824 is out for delivery and will arrive shortly.</p>
+</div>
+<div class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full md:hidden"></div>
+</a>
+<!-- Notification Card (Unread, Offer) -->
+<a href="../mother_tinctures_catalog/code.html" class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] p-md flex gap-md items-start relative border-l-4 border-secondary hover:bg-surface-container-low transition-colors block cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container icon-fill-1" data-icon="sell">sell</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-title-lg text-title-lg text-on-surface font-semibold">15% Off Dilutions</h4>
+<span class="font-label-md text-label-md text-primary font-medium">08:15 AM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Stock up on essentials. Use code HEALTH15 at checkout today.</p>
+</div>
+<div class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full md:hidden"></div>
+</a>
+</div>
+</section>
+<!-- Earlier Group -->
+<section>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-sm uppercase tracking-wider">Earlier</h3>
+<div class="space-y-sm">
+<!-- Notification Card (Read, Prescription) -->
+<a href="../medicine_reminders/code.html" class="bg-surface-container-lowest/60 rounded-xl p-md flex gap-md items-start border border-outline-variant/30 hover:bg-surface-container-low transition-colors block cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-outline" data-icon="medication">medication</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-title-lg text-title-lg text-on-surface">Refill Reminder</h4>
+<span class="font-label-md text-label-md text-outline">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Time to reorder your regular dilutions for Arnica Montana 30C.</p>
+</div>
+</a>
+<!-- Notification Card (Read, General) -->
+<a href="../order_tracking_live_status/code.html" class="bg-surface-container-lowest/60 rounded-xl p-md flex gap-md items-start border border-outline-variant/30 hover:bg-surface-container-low transition-colors block cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-outline" data-icon="inventory_2">inventory_2</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-title-lg text-title-lg text-on-surface">Order Delivered</h4>
+<span class="font-label-md text-label-md text-outline">Oct 12</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Order #SH-9810 has been delivered successfully. Thank you for choosing Shukla Homoeo.</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Hidden on md and up) -->
+<nav class="bg-surface-container dark:bg-surface-container-highest shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full transition-colors" href="../home_shukla_homoeo_pharmacy_e_commerce/code.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full transition-colors" href="../mother_tinctures_catalog/code.html">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label-md text-label-md mt-1">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full transition-colors" href="../upload_prescription/code.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md text-label-md mt-1">Upload</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full transition-colors" href="../my_cart_2_items/code.html">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-md text-label-md mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1 transform scale-90 transition-transform duration-200" href="../contact_us_shukla_homoeo_pharmacy/code.html">
+<span class="material-symbols-outlined icon-fill-1" data-icon="person">person</span>
+<span class="font-label-md text-label-md mt-1">Help</span>
+</a>
+</nav>
+</body></html>

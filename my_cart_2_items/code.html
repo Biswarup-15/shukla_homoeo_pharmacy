@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>My Cart - Shukla Homoeo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e4db",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c0c9bb",
+                        "surface": "#f7fbf1",
+                        "tertiary-fixed": "#ffd9e2",
+                        "on-surface": "#191d17",
+                        "outline": "#717a6d",
+                        "background": "#f7fbf1",
+                        "secondary-fixed": "#cfe5ff",
+                        "inverse-on-surface": "#eff2e9",
+                        "surface-container": "#ecefe6",
+                        "inverse-surface": "#2d322c",
+                        "secondary": "#00629e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f5ec",
+                        "surface-bright": "#f7fbf1",
+                        "on-tertiary-container": "#ffaec6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#41493e",
+                        "surface-container-high": "#e6e9e0",
+                        "on-secondary-container": "#004470",
+                        "surface-tint": "#2a6b2c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3e001d",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "on-primary-fixed": "#002203",
+                        "primary-fixed": "#acf4a4",
+                        "on-secondary-fixed": "#001d34",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-primary-container": "#90d689",
+                        "primary-container": "#1b5e20",
+                        "on-tertiary-fixed-variant": "#7a2949",
+                        "secondary-fixed-dim": "#99cbff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e4db",
+                        "tertiary-container": "#883454",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#62b4fe",
+                        "inverse-primary": "#91d78a",
+                        "primary": "#00450d",
+                        "on-secondary-fixed-variant": "#004a78",
+                        "tertiary-fixed-dim": "#ffb1c8",
+                        "on-background": "#191d17",
+                        "surface-dim": "#d8dbd2",
+                        "tertiary": "#6b1d3d",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "gutter": "16px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "price-tag": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "price-tag": ["20px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .pt-safe { padding-top: env(safe-area-inset-top); }
+        
+        /* Ambient shadows for tactile feel */
+        .card-shadow { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); }
+        .fab-shadow { box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased font-body-md min-h-screen flex flex-col pt-safe pb-safe pb-[80px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-xs bg-surface shadow-sm">
+<a href="../home_shukla_homoeo_pharmacy_e_commerce/code.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">My Cart</h1>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[72px] px-margin-mobile flex flex-col gap-lg pb-xl max-w-3xl mx-auto w-full">
+<!-- Cart Items -->
+<section class="flex flex-col gap-sm">
+<!-- Item 1 -->
+<div class="bg-white rounded-[12px] p-sm card-shadow flex gap-md items-center">
+<a href="../product_details_berberis_vulgaris_q/code.html" class="w-[80px] h-[80px] bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0 relative block">
+<img class="object-cover w-full h-full absolute inset-0" data-alt="A clean, professional studio shot of a 30ml amber glass homeopathic medicine bottle labeled Berberis Vulgaris Q. The bottle rests on a sterile white surface under soft, natural lighting, reflecting a trustworthy medical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWZGlBcOwps4Xhncj6tmxdOvi9mnPg0-abpuOFEN0Rs_ZqjAakjkB00_du3f-RmW4bXRymVYtf2fz1ncZtRqEDz6E--DqERdYiEUlsrBqMOP_fy3QE2IhJ7muynQY_WpZ9YyE03c6ck0X9Afv5ttUVkUTL8vb-EjaLRPU3YiD3eifNxhCfdMI-c0b37GzZGX8VZyrjvg_mrDjhykEODZ8hu-t4eLGl5ad6cccG1qh91C5uL0gSto_H"/>
+</a>
+<div class="flex-grow flex flex-col justify-between h-full py-base">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface hover:text-primary"><a href="../product_details_berberis_vulgaris_q/code.html">Berberis Vulgaris Q</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">30ml Liquid Dilution</p>
+</div>
+<div class="flex justify-between items-end mt-sm">
+<span class="font-price-tag text-price-tag text-primary">₹120</span>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full border border-outline-variant px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant rounded-full active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="font-body-md text-body-md text-on-surface w-6 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant rounded-full active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white rounded-[12px] p-sm card-shadow flex gap-md items-center">
+<div class="w-[80px] h-[80px] bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="object-cover w-full h-full absolute inset-0" data-alt="A macro photography shot of two small plastic pill bottles containing Arnica Montana 30 homeopathic pills. The lighting is crisp and bright, highlighting the clinical cleanliness and modern packaging of the medicine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwI0qZhV277hvPhyeeF0hRLGjm3ZS8zrdHigIDjXsKck931ZtWof2JmhWMzMMN1DBj4izg53k7F9fEfYlGTJME_Wy016tnWAdhfZU4gs7jby7hPbRhcyGNuYnXN-Fx255Agb8bMgYhJFqgABNboNUPUG5CLSlvLGlwVRWm3q0RMtabfmIdG6tBmNpQQiruKyD5LA8ypVw1V5Fe1baIbruvLxeGc6GYs52SzXsapCA9hm-rf63lTPr"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-base">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Arnica Montana 30</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">30ml Pills</p>
+</div>
+<div class="flex justify-between items-end mt-sm">
+<span class="font-price-tag text-price-tag text-primary">₹90</span>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full border border-outline-variant px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant rounded-full active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="font-body-md text-body-md text-on-surface w-6 text-center">2</span>
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant rounded-full active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Price Summary -->
+<section class="bg-white rounded-[12px] p-md card-shadow flex flex-col gap-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface mb-xs border-b border-surface-variant pb-xs">Price Details</h2>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Subtotal (3 items)</span>
+<span>₹300</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-surface-tint">
+<span>Discount</span>
+<span>-₹40</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Delivery Charges</span>
+<span>₹30</span>
+</div>
+<div class="flex justify-between items-center font-title-lg text-title-lg text-on-surface border-t border-surface-variant pt-sm mt-xs">
+<span>Total Payable</span>
+<span>₹290</span>
+</div>
+</section>
+<!-- Trust Badge -->
+<div class="flex items-center justify-center gap-xs text-on-surface-variant py-xs bg-surface-container-low rounded-lg mb-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md">100% Genuine Medicines • Secure Checkout</span>
+</div>
+</main>
+<!-- Bottom Actions / Nav Wrapper -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex flex-col bg-surface-container shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl pb-safe">
+<!-- CTA -->
+<div class="px-margin-mobile py-sm border-b border-surface-variant md:hidden">
+<a href="../upload_prescription/code.html" class="w-full bg-[#0277BD] text-on-primary font-title-lg text-title-lg py-sm px-xl rounded-[24px] fab-shadow active:scale-95 transition-transform duration-200 flex items-center justify-center cursor-pointer">
+                Proceed to Checkout
+</a>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="flex justify-around items-center px-xs py-sm md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="../home_shukla_homoeo_pharmacy_e_commerce/code.html">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="../mother_tinctures_catalog/code.html">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200">category</span>
+<span class="font-label-md text-label-md mt-1">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="../upload_prescription/code.html">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200">description</span>
+<span class="font-label-md text-label-md mt-1">Upload</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-3 py-1 hover:bg-surface-variant transition-colors group" href="code.html">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="font-label-md text-label-md mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="../contact_us_shukla_homoeo_pharmacy/code.html">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200">person</span>
+<span class="font-label-md text-label-md mt-1">Help</span>
+</a>
+</nav>
+</div>
+</body></html>

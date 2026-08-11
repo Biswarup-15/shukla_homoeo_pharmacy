@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shukla Homoeo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#cfe5ff",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f7fbf1",
+                      "secondary": "#00629e",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#90d689",
+                      "on-tertiary-container": "#ffaec6",
+                      "surface-dim": "#d8dbd2",
+                      "on-background": "#191d17",
+                      "background": "#f7fbf1",
+                      "error": "#ba1a1a",
+                      "primary-container": "#1b5e20",
+                      "on-secondary-container": "#004470",
+                      "inverse-on-surface": "#eff2e9",
+                      "on-primary-fixed-variant": "#0c5216",
+                      "surface-tint": "#2a6b2c",
+                      "surface-container-highest": "#e0e4db",
+                      "tertiary-fixed-dim": "#ffb1c8",
+                      "primary-fixed": "#acf4a4",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f7fbf1",
+                      "secondary-fixed-dim": "#99cbff",
+                      "surface-container": "#ecefe6",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#91d78a",
+                      "inverse-primary": "#91d78a",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#2d322c",
+                      "outline-variant": "#c0c9bb",
+                      "tertiary-container": "#883454",
+                      "on-surface-variant": "#41493e",
+                      "on-tertiary-fixed": "#3e001d",
+                      "on-secondary-fixed-variant": "#004a78",
+                      "secondary-container": "#62b4fe",
+                      "primary": "#00450d",
+                      "surface-variant": "#e0e4db",
+                      "outline": "#717a6d",
+                      "on-surface": "#191d17",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#ffd9e2",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f2f5ec",
+                      "tertiary": "#6b1d3d",
+                      "on-tertiary-fixed-variant": "#7a2949",
+                      "on-secondary-fixed": "#001d34",
+                      "surface-container-high": "#e6e9e0",
+                      "on-primary-fixed": "#002203"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "margin-desktop": "48px",
+                      "gutter": "16px",
+                      "base": "4px",
+                      "lg": "24px",
+                      "xs": "8px",
+                      "sm": "12px",
+                      "md": "16px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "price-tag": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "price-tag": [
+                              "20px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased pb-24 md:pb-0">
+<!-- Top App Bar (Mobile) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-xs bg-surface shadow-sm md:hidden">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">local_pharmacy</span>
+<h1 class="font-headline-sm text-headline-sm text-primary">Shukla Homoeo</h1>
+</div>
+<div class="flex items-center gap-sm">
+<a href="../notifications/code.html" class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-1 active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span>
+</a>
+<a href="../my_cart_2_items/code.html" class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-1 active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 flex h-3 w-3 items-center justify-center rounded-full bg-error text-[8px] font-bold text-on-error">2</span>
+</a>
+</div>
+</header>
+<!-- Top Nav (Desktop) -->
+<header class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-md bg-surface shadow-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-3xl">local_pharmacy</span>
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Shukla Homoeo</h1>
+</div>
+<div class="flex-1 max-w-2xl mx-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="w-full pl-10 pr-4 py-sm rounded-full bg-surface-container-lowest border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-on-surface-variant" placeholder="Search medicines, products &amp; categories..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<nav class="flex items-center gap-md">
+<a class="font-body-md text-body-md text-primary font-semibold" href="code.html">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="../mother_tinctures_catalog/code.html">Categories</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="../upload_prescription/code.html">Prescriptions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="../medicine_reminders/code.html">Reminders</a>
+</nav>
+<div class="flex items-center gap-sm">
+<a href="../notifications/code.html" class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-2 active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined">notifications</span>
+</a>
+<a href="../my_cart_2_items/code.html" class="text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full p-2 active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-[10px] font-bold text-on-error">2</span>
+</a>
+<a href="../contact_us_shukla_homoeo_pharmacy/code.html" class="flex items-center gap-xs px-sm py-xs rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</div>
+</div>
+</header>
+<main class="pt-16 md:pt-24 min-h-screen">
+<!-- Search Bar (Mobile only) -->
+<div class="px-margin-mobile py-sm md:hidden sticky top-14 z-40 bg-surface">
+<div class="relative w-full shadow-sm rounded-full">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="w-full pl-10 pr-4 py-sm rounded-full bg-surface-container-lowest border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-on-surface-variant font-body-md text-body-md" placeholder="Search medicines, products..." type="text"/>
+</div>
+</div>
+<!-- Delivery Location Bar -->
+<div class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-xs flex justify-between items-center text-xs md:text-sm border-b border-surface-variant">
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Deliver to <strong>New Delhi - 110001</strong></span>
+</div>
+<button class="text-secondary font-medium hover:underline">Change</button>
+</div>
+<!-- Categories Horizontal Scroll -->
+<section class="px-margin-mobile md:px-margin-desktop py-md">
+<div class="flex justify-between items-center mb-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Shop by Category</h2>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center gap-xs" href="../mother_tinctures_catalog/code.html">
+<span>View All</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<div class="flex gap-md overflow-x-auto pb-sm no-scrollbar">
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of a medicine dropper bottle, representing mother tinctures, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZeXRSSPRzLNM0JWXQ2chZC9OI2os7ZgsrRJBxSqRMlOlo27TsGHxPYsQualN4IW723n1RLtY_IWPbPMVd4ZKu3DLJCHiRBSeGeIyMoOVSoD2PjZmLII3DkE-7dT--sELZLl0_nD97gak8y8Ac85FmWRjPuLVWtA_a3-nLhnpVzfEsgrDpQ5gDm80ii2BJ5Nw4fBVLl4v0rH_UXsxai6h0a022cfvcbK1fR00r0LBvY824Fj6T6Fd5"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Mother Tinctures</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of a liquid drop, representing dilutions, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtEDK05nAnOSgmcTdQSR7pv7Sq5PmKcAYwUW_tG1HdWUxXuMnu39yt7-TsdeFAXBdmx-Qv1B6G7vSTAkOtJkH4maS-p4dJUm-XArddV-tUbP-A5D63fDMerJp_JUEc7VvEmAjQyjVBd-fEuazzdKF_soM2tN8EqaXIgTTbmImBZakgKbOzMBUuJSmiWZItuFqQ5S7kJaqCxrBjStmJtfYaA0IO12GRCsAJCXuNpWy0GFPlBi7HUOXP"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Dilutions</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of round medicine pills, representing tablets, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBttNk2KP-HTeR4zo5ucZSAZNKmEVVpfvbYnVyE8sYZFKbJCNz04EdkWAhafqRPB0TX5cM_zK8VZgshr4o3QO2_U1TM3bR8CnU0yuHSJb80x3cCiXn7kfVmP7EBl1FdaaQPkmCV6DGMr-5sYBXPUD7ANqy3pGVsq5EvF5YrXGhodBwfj4p8xgrLUERj0tn1fLHFn0f7yK5SdKUpwoI8RJDF1bJyWPKaYDxO74LggGPeKlNZycUJBDbf"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Tablets</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of an eye drop bottle, representing specialty drops, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtXwpEaoFweVsxxlb2OT1l3Rp87uEd5oWt1BwXFlORnqniWnfeJhqZJJLzfWZiL_dMe2U_PsVgi0izUaqjvoyJ9_k7b-4_AojRfGrOcM60IHMYH2sOYdDcFb_CISBWP1eWWiZQoqXU-S-4PapQmHTCOQtRIMIp_Jn4QJxdWNLr3w9yQszJNZGE9ouWUzONphbZC0ugASe-TPKgthF7rqfPY7je9c6B_sf0xOmOpzlk6TDGtv1hQ0la"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Drops</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of a medicine bottle with a measuring spoon, representing syrups, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD_IjpXyA7b1rvoN9VTG4VfbN9SHmyl-QA8eXzqVtZP9GjN9rpCQ_9r5AdF9htbQCUsaQHjr29CHOxoDb4J1s5vnGVhhDGF2hyQI63kaTA6_K3-_4DOPOJwif3numBGpuuo5ytXlAfjrFd54p0k1SAPgHkY2qsgJu1_Nx5Aho9f64_6lHBtry396ChgektXqlSf6UxuVFT_A1ZLN2uMq_trvzJzlWKXnJutDGC2bq_la0K6zZCHXf9"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Syrups</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<img class="w-6 h-6 md:w-8 md:h-8 object-contain" data-alt="A small, stylized line-art icon of a mortar and pestle, representing ayurvedic or traditional combinations, drawn in medical blue against a clean background, minimalistic corporate healthcare style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkqMmqTHjW-TAIXfwnEbW47GPPJlZfiJsGgmM5P6miH4KTkdBhtriYRRIQHlI4m8KqnmblFvlAnSbtNKgxiXn3b5B7Grs9mHvFxVwq2jRzq2JfIzLPChZya_v9wLlOG5eGXkW2PO4WF3iNBZfBZxfpwI5HmtEMV5C_ft_7J9U71cYKjMbY1XBfMTf_EiK3JchcsFiBEWgvjr9gREabayB6VavtbFaGtvq8gLwhbmUFdIDi2l84ZyFA"/>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">Biochemics</span>
+</a>
+<a class="flex flex-col items-center gap-xs group w-16 md:w-20" href="../mother_tinctures_catalog/code.html">
+<div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors text-2xl md:text-3xl">category</span>
+</div>
+<span class="font-label-md text-label-md text-center text-on-surface group-hover:text-primary transition-colors leading-tight">View All</span>
+</a>
+</div>
+</section>
+<!-- Promotional Banner Carousel -->
+<section class="px-margin-mobile md:px-margin-desktop py-md">
+<div class="w-full aspect-[21/9] md:aspect-[32/9] rounded-xl overflow-hidden relative shadow-sm group">
+<div class="bg-cover bg-center w-full h-full flex items-center p-md md:p-xl relative" data-alt="A wide, promotional healthcare banner showing a clean, well-lit pharmacy shelf with modern homeopathic medicine bottles. Overlay text area left blank. High-key lighting, soft white and medical green color palette, professional e-commerce feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOsc91-lhY-J30wruLwI_J_AHP95S_etZJG9U3H2CXVR57nGHv3_su32Fjyctcemlw4-F2pqBlvTquPACrDuKR574IlHDxcZDI7zP5PIX7CyfZ-j03u5YfjzBJGuvbbqQOsuAJv-WrA-2k1RW_qPMGdzOBkM0-Yiem90UxdtMRpV_NAf7lbmIN5J0pOnS4kaegGyu7vkY_WvpCaoPb063SgChQvisliXY7UKEAgSgL24R5rkrD_nA0')">
+<!-- Gradient overlay for text readability -->
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-highest via-surface-container-lowest/80 to-transparent"></div>
+<div class="relative z-10 max-w-sm">
+<span class="inline-block px-2 py-1 bg-primary text-on-primary font-label-md text-[10px] md:text-xs rounded-sm mb-xs uppercase font-bold tracking-wider">Special Offer</span>
+<h2 class="font-title-lg text-title-lg md:font-display-lg md:text-display-lg text-on-surface font-bold mb-xs md:mb-sm leading-tight">Winter Wellness Essentials</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm md:mb-md hidden md:block">Stock up on immunity boosters and cold relief dilutions.</p>
+<p class="font-body-md text-sm text-on-surface-variant mb-sm md:hidden">Up to 15% off on immunity boosters.</p>
+<a href="../mother_tinctures_catalog/code.html" class="inline-block bg-secondary text-on-secondary px-4 py-2 md:px-6 md:py-3 rounded-full font-label-md text-sm md:text-base font-bold shadow-md hover:bg-secondary/90 transition-colors">Shop Now</a>
+</div>
+</div>
+<!-- Carousel Indicators -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+<span class="w-4 h-1.5 bg-primary rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-surface-variant/80 rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-surface-variant/80 rounded-full"></span>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-margin-mobile md:px-margin-desktop pb-lg flex gap-sm overflow-x-auto no-scrollbar">
+<a href="../upload_prescription/code.html" class="flex-shrink-0 flex items-center gap-sm bg-surface-container-lowest border border-outline-variant p-sm rounded-lg shadow-sm hover:border-secondary transition-colors min-w-[140px]">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm">prescriptions</span>
+</div>
+<div class="text-left">
+<span class="block font-label-md text-xs font-bold text-on-surface">Upload Rx</span>
+<span class="block text-[10px] text-on-surface-variant">Order medicines</span>
+</div>
+</a>
+<a href="../order_tracking_live_status/code.html" class="flex-shrink-0 flex items-center gap-sm bg-surface-container-lowest border border-outline-variant p-sm rounded-lg shadow-sm hover:border-secondary transition-colors min-w-[140px]">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+<div class="text-left">
+<span class="block font-label-md text-xs font-bold text-on-surface">Track Order</span>
+<span class="block text-[10px] text-on-surface-variant">View status</span>
+</div>
+</a>
+<a href="../medicine_reminders/code.html" class="flex-shrink-0 flex items-center gap-sm bg-surface-container-lowest border border-outline-variant p-sm rounded-lg shadow-sm hover:border-secondary transition-colors min-w-[140px]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-sm">history</span>
+</div>
+<div class="text-left">
+<span class="block font-label-md text-xs font-bold text-on-surface">Reminders</span>
+<span class="block text-[10px] text-on-surface-variant">Medicine schedule</span>
+</div>
+</a>
+</section>
+<!-- Top Selling Medicines Shelf -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg bg-surface-container-low">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Top Selling Medicines</h3>
+<p class="font-body-md text-xs text-on-surface-variant mt-1">Most popular choices by our customers</p>
+</div>
+<a class="font-label-md text-sm text-secondary font-semibold hover:underline flex items-center" href="#">View All <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+<div class="flex gap-gutter overflow-x-auto no-scrollbar pb-sm">
+<!-- Product Card 1 -->
+<div class="min-w-[160px] md:min-w-[200px] bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-transparent hover:border-outline-variant transition-colors group">
+<span class="absolute top-2 left-2 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm z-10">15% OFF</span>
+<a href="../product_details_berberis_vulgaris_q/code.html" class="w-full aspect-square bg-surface-container rounded-lg mb-sm p-4 relative flex items-center justify-center block">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean, studio-lit photo of a small amber glass bottle of homeopathic medicine (Mother Tincture) on a white background. Professional e-commerce product shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjw-leviqjLS1j3KmYCSleBqAjP37luv3JmB273lVWo29v3zRgTS2q_g3c4UiAdEpUHlM1tlT_QljuaLDcTTWPnvpjJhv9vKwzgNBGn8_9MSYEdNuousiUZeYjRq6RvNYS-0MzccknIE3JM2bwVSuab-qBcLBLMpLFoXkRU9aBsJ9T3tUOy2GeHfa_Pk8U8_RcIZP5h5FPKBq1XuYpjQm_qMJ5F7H-Z9xDtwcvFiO7m_THoQBM7CrX"/>
+<a href="../my_wishlist_saved_items/code.html" class="absolute top-2 right-2 text-outline hover:text-error transition-colors bg-surface-container-lowest/80 rounded-full p-1 shadow-sm backdrop-blur-sm z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</a>
+</a>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">Mother Tincture</span>
+<h4 class="font-title-lg text-sm font-semibold text-on-surface leading-tight mb-1 line-clamp-2 hover:text-primary"><a href="../product_details_berberis_vulgaris_q/code.html">Berberis Vulgaris Q</a></h4>
+<p class="text-xs text-on-surface-variant mb-2">30 ml Tincture</p>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<div class="font-price-tag text-base text-surface-tint font-bold">₹120</div>
+<div class="text-[10px] text-outline line-through">MRP ₹140</div>
+</div>
+<a href="../my_cart_2_items/code.html" class="bg-secondary text-on-secondary w-8 h-8 rounded-full flex items-center justify-center shadow-md hover:bg-secondary/90 transition-colors shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[160px] md:min-w-[200px] bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-transparent hover:border-outline-variant transition-colors group">
+<span class="absolute top-2 left-2 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm z-10">10% OFF</span>
+<div class="w-full aspect-square bg-surface-container rounded-lg mb-sm p-4 relative flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean, studio-lit photo of a medium amber glass bottle of Nux Vomica dilution on a white background. Professional e-commerce product shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkZ1iIA-QcebSMuhvcY-c37nOQRZ4VPmh0LsWPbYBTv3UrNphPlhoW9U4YxzB18IapsiXWHKsSM-K75t3Pc5y8SwxupbXrBHp9fEOL6qPszoOMr1eRGrbNKv5_NBeyU3umvRTje4mRWb31pXInWoNVyJiEUk6EyNe9AuvZQOcOpX_srBuqpfAwdTa-Yvg4y7ZBtCVb3iC4DIHmuNYWe2tmldAiz3_hfoJIDSYfBj50vTmW1DoyPEi9"/>
+<button class="absolute top-2 right-2 text-outline hover:text-error transition-colors bg-surface-container-lowest/80 rounded-full p-1 shadow-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">Dr. Reckeweg</span>
+<h4 class="font-title-lg text-sm font-semibold text-on-surface leading-tight mb-1 line-clamp-2">Nux Vomica 30 CH</h4>
+<p class="text-xs text-on-surface-variant mb-2">11 ml Dilution</p>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<div class="font-price-tag text-base text-surface-tint font-bold">₹85</div>
+<div class="text-[10px] text-outline line-through">MRP ₹95</div>
+</div>
+<button class="bg-surface-container text-on-surface-variant border border-outline-variant w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-secondary hover:text-on-secondary transition-colors shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[160px] md:min-w-[200px] bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-transparent hover:border-outline-variant transition-colors group">
+<div class="w-full aspect-square bg-surface-container rounded-lg mb-sm p-4 relative flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean, studio-lit photo of a box of homeopathic tablets on a white background. Professional e-commerce product shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpkmFO6FSB9vb8-XwHi3nLtOhfvT90jRg9PKSeimXKP6c2YDTao87DWGh2FvdC_zHE5zHbQyXC0arSdnMyKpUHe5BDhcSB2cZof3_iNCsnn6DO1rge1NbeeAuXi0gz_yBKyWKy9re8IuML_zDCdHlEsByV2-G6Z4FDLnDusSzusLAdBkQlVQW2JSweeoGsHhMARaw6CE2r3JA4YhOl1whRq1DA6FQggj6K7Bsju5tozDR4Q81iK7UW"/>
+<button class="absolute top-2 right-2 text-outline hover:text-error transition-colors bg-surface-container-lowest/80 rounded-full p-1 shadow-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">SBL Pvt Ltd</span>
+<h4 class="font-title-lg text-sm font-semibold text-on-surface leading-tight mb-1 line-clamp-2">Bio-Combination 28</h4>
+<p class="text-xs text-on-surface-variant mb-2">25g Tablets</p>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<div class="font-price-tag text-base text-surface-tint font-bold">₹105</div>
+<div class="text-[10px] text-transparent select-none">Spacer</div> <!-- Alignment trick -->
+</div>
+<button class="bg-surface-container text-on-surface-variant border border-outline-variant w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-secondary hover:text-on-secondary transition-colors shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[160px] md:min-w-[200px] bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-transparent hover:border-outline-variant transition-colors group">
+<span class="absolute top-2 left-2 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm z-10">5% OFF</span>
+<div class="w-full aspect-square bg-surface-container rounded-lg mb-sm p-4 relative flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean, studio-lit photo of a small plastic bottle of eye drops on a white background. Professional e-commerce product shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1s3y0YMgyrasRZr3YXwNQVzeOg_ZmT6y2pg-Y0JzoRM0olGCjh8eevLacf6aJpfTnU5l9AolnLPA_LFdcDntHAuIScXM1BotsdoSQ0ZKLW9W2EfBI1Lp0sAZ4rvxzZd3W7FPldCO8wJaJ960n8BiQe6pcCMWOgX0p-mM1zbMTj1VXBEhh4lRifKiSNqFUIUMO8YXH_W77HQoLwkUACLLS9Ze8i1QgdJh3r_jaYVEjoXkO3jYcp12D"/>
+<button class="absolute top-2 right-2 text-outline hover:text-error transition-colors bg-surface-container-lowest/80 rounded-full p-1 shadow-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">Schwabe India</span>
+<h4 class="font-title-lg text-sm font-semibold text-on-surface leading-tight mb-1 line-clamp-2">Cineraria Maritima Eye Drops</h4>
+<p class="text-xs text-on-surface-variant mb-2">10 ml Drops</p>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<div class="font-price-tag text-base text-surface-tint font-bold">₹145</div>
+<div class="text-[10px] text-outline line-through">MRP ₹155</div>
+</div>
+<button class="bg-surface-container text-on-surface-variant border border-outline-variant w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-secondary hover:text-on-secondary transition-colors shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Deals & Offers Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-md">Deals &amp; Offers</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm md:gap-md">
+<div class="bg-primary-container/20 border border-primary-container/30 rounded-xl p-md flex items-center gap-md relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary-container rounded-full opacity-10"></div>
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-primary text-3xl">percent</span>
+</div>
+<div>
+<h4 class="font-title-lg text-base font-bold text-on-surface mb-1">Flat 20% OFF</h4>
+<p class="text-xs text-on-surface-variant mb-2">On all Dr. Reckeweg products.</p>
+<span class="text-[10px] font-bold text-primary bg-primary-container/30 px-2 py-1 rounded">CODE: DR20</span>
+</div>
+</div>
+<div class="bg-secondary-container/20 border border-secondary-container/30 rounded-xl p-md flex items-center gap-md relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-secondary-container rounded-full opacity-10"></div>
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm border border-secondary/10">
+<span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
+</div>
+<div>
+<h4 class="font-title-lg text-base font-bold text-on-surface mb-1">Free Delivery</h4>
+<p class="text-xs text-on-surface-variant mb-2">On orders above ₹500.</p>
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/30 px-2 py-1 rounded">AUTO APPLIED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Mother Tinctures Shelf -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg bg-surface">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Mother Tinctures (Q)</h3>
+<p class="font-body-md text-xs text-on-surface-variant mt-1">Pure botanical extracts</p>
+</div>
+<a class="font-label-md text-sm text-secondary font-semibold hover:underline flex items-center" href="#">View All <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+<!-- Bento-style grid for higher density on desktop, horizontal scroll on mobile -->
+<div class="flex md:grid md:grid-cols-3 lg:grid-cols-4 gap-gutter overflow-x-auto no-scrollbar pb-sm">
+<!-- MT Card 1 -->
+<div class="min-w-[240px] md:min-w-0 bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary transition-colors flex gap-sm items-center">
+<div class="w-16 h-16 bg-surface-container rounded-lg p-2 shrink-0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean photo of Berberis Vulgaris Mother Tincture bottle, small amber glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCG6X1bXrDmxTfFEST0OfrO1N3sYK7xdlgspMRXfemZfWd8Ieczj2yAWUBmrqBYY5azRdYj_XdTIjAGVxGhZyeg9S71sjSX77fdqFzb_qzbTAiQhraV4O4piUaX0qi2Tpb8we9qxmwTgC51sxLSXZtnAqF12qRom56OPDi_v_DgMH_fX6RnrU69nbT6i88QL98Bt-arYz0dacSXlHNb5T7QtzBZaypZ8ezhj6KO3CnKx3492AE_Pj"/>
+</div>
+<div class="flex-1">
+<h4 class="font-title-lg text-sm font-semibold text-on-surface line-clamp-1">Berberis Vulgaris Q</h4>
+<p class="text-[10px] text-on-surface-variant mb-1">30 ml</p>
+<div class="flex items-center justify-between">
+<div class="font-price-tag text-sm text-surface-tint font-bold">₹120</div>
+<button class="text-secondary hover:bg-secondary-container rounded p-1 transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MT Card 2 -->
+<div class="min-w-[240px] md:min-w-0 bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary transition-colors flex gap-sm items-center">
+<div class="w-16 h-16 bg-surface-container rounded-lg p-2 shrink-0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean photo of Rauwolfia Serpentina Mother Tincture bottle, small amber glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYKbhz17vr3Ul8srrR_LdzceIt3buA-ROxDPFh_ZSszCjOUfteZ0jAso-2N0o_E1Yj9aL_hiy9E0yvMU1gJPjjyBlS4WE3m-KECFljqDleFcF2Dl43MtZ1Y03UL3A1PCVftxCMosIRnY64jUBiDnkiB2ympLdS3ZPVpSCk-n9yZfj5A-TRvCIgWId8BoF6J8x1GvsbTlUmvDRNac76LnNelUVUCHSIEHzeS3c3gubZcixDosWxRcn"/>
+</div>
+<div class="flex-1">
+<h4 class="font-title-lg text-sm font-semibold text-on-surface line-clamp-1">Rauwolfia Q</h4>
+<p class="text-[10px] text-on-surface-variant mb-1">30 ml</p>
+<div class="flex items-center justify-between">
+<div class="font-price-tag text-sm text-surface-tint font-bold">₹95</div>
+<button class="text-secondary hover:bg-secondary-container rounded p-1 transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MT Card 3 -->
+<div class="min-w-[240px] md:min-w-0 bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary transition-colors flex gap-sm items-center">
+<div class="w-16 h-16 bg-surface-container rounded-lg p-2 shrink-0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean photo of Calendula Officinalis Mother Tincture bottle, small amber glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm3k88kNtLKnuewpsV77rZcVzejOvjWncQfv3-iBlKrYmdqjw0jMrs7cpkW7guQJOlp77esNhNGMvBHZ_Xi_h-zxUWwx3vZ54T2-KgLummCHSURK3PW8m770stNwDCbeIXEUl-WxXyeTVE7SzOfwq9eaGjiEcf45R5_fIU86GD_FXtC3f3kqo96XROVByuv0fWJACGXV6CLf39H4yi--rk2_SKI_W_Xox6OBCAIXUGn47mvhzplNGs"/>
+</div>
+<div class="flex-1">
+<h4 class="font-title-lg text-sm font-semibold text-on-surface line-clamp-1">Calendula Q</h4>
+<p class="text-[10px] text-on-surface-variant mb-1">100 ml</p>
+<div class="flex items-center justify-between">
+<div class="font-price-tag text-sm text-surface-tint font-bold">₹110</div>
+<button class="text-secondary hover:bg-secondary-container rounded p-1 transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MT Card 4 (Hidden on small mobile, shows on tablet/desktop) -->
+<div class="hidden md:flex min-w-[240px] md:min-w-0 bg-surface-container-lowest rounded-xl p-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary transition-colors gap-sm items-center">
+<div class="w-16 h-16 bg-surface-container rounded-lg p-2 shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-2xl">science</span>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h4 class="font-title-lg text-sm font-semibold text-secondary line-clamp-1">Explore All</h4>
+<p class="text-[10px] text-on-surface-variant mb-1">50+ Tinctures</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Store Info Footer (Compact) -->
+<footer class="bg-surface-container-high px-margin-mobile md:px-margin-desktop py-lg mt-md border-t border-outline-variant/30">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<h3 class="font-headline-sm text-base text-on-surface font-bold mb-1 flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-sm">storefront</span>
+                        Shukla Homoeo Pharmacy
+                    </h3>
+<p class="text-xs text-on-surface-variant mb-1">123 Health Avenue, Medical District, New Delhi - 110001</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface-tint inline-block"></span>
+                        Open today: 09:00 AM - 09:00 PM
+                    </p>
+</div>
+<div class="flex gap-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-xs px-4 py-2 border border-outline bg-surface-container-lowest text-on-surface rounded-full text-xs font-semibold hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">call</span>
+                        Call Store
+                    </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-xs px-4 py-2 bg-secondary text-on-secondary rounded-full text-xs font-semibold shadow-sm hover:bg-secondary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">directions</span>
+                        Directions
+                    </button>
+</div>
+</div>
+</footer>
+</main>
+<!-- Bottom Nav Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface-container shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-3 py-1 active:scale-90 transition-transform duration-200" href="code.html">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-full" href="../mother_tinctures_catalog/code.html">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label-md text-[10px] mt-1">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-full" href="../upload_prescription/code.html">
+<span class="material-symbols-outlined" data-icon="description">Prescription</span>
+<span class="font-label-md text-[10px] mt-1">Upload</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-full relative" href="../my_cart_2_items/code.html">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1 right-2 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-error text-[8px] font-bold text-on-error">2</span>
+<span class="font-label-md text-[10px] mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 hover:bg-surface-variant transition-colors rounded-full" href="../contact_us_shukla_homoeo_pharmacy/code.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-[10px] mt-1">Help</span>
+</a>
+</nav>
+</body></html>
